@@ -1,0 +1,253 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+* {
+  /*全體元素*/
+  margin: 0;
+  padding: 0;
+  border: 0px;
+  list-style-type: none;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  text-decoration: none;
+  text-decoration: none; }
+
+a {
+  text-decoration: none; }
+
+.f-bold {
+  font-weight: bold; }
+
+.f-Italic {
+  font-style: italic; }
+
+.input-style {
+  border-radius: 5px;
+  height: 50px;
+  border: none;
+  padding: 0 5px;
+  caret-color: green; }
+
+.cardImage {
+  width: 100%;
+  height: 200px;
+  margin-bottom: 14px; }
+
+.tagSpan {
+  border-radius: 10px;
+  color: #11abde;
+  padding: 5px;
+  margin-top: 10px;
+  margin-right: 7px;
+  font-weight: bold; }
+  .tagSpan:hover {
+    border: 2px solid #31c3f3;
+    color: #f5f8f8;
+    background-color: #31c3f3; }
+
+.cardContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: left;
+  -ms-flex-pack: left;
+  justify-content: left;
+  margin-bottom: 50px; }
+
+.card {
+  width: 23%;
+  height: 100%;
+  border-radius: 10px;
+  margin: 10px 1% 70px 1%; }
+
+/*SCSS變數管理*/
+/* @mixin and RWD needed*/
+/*----------------------------------------------------------------------------*/
+body {
+  width: 100%;
+  height: auto;
+  /*end banner*/
+  /*end cardsArea*/ }
+  body .banner {
+    background-image: url("unsplash_L6xHmv2R3G4.png");
+    background-size: cover;
+    max-width: 100%;
+    height: 775px;
+    overflow: hidden;
+    position: relative;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box; }
+    body .banner .header {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      z-index: 10; }
+    body .banner .middleBox {
+      width: auto;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      position: absolute;
+      top: 205px;
+      left: 22%;
+      right: 20%; }
+      body .banner .middleBox h1 {
+        color: white;
+        text-align: center;
+        margin-bottom: 48px;
+        text-shadow: 2px 2px 5px black;
+        -webkit-transition: ease .5s;
+        -o-transition: ease .5s;
+        transition: ease .5s; }
+        body .banner .middleBox h1:hover {
+          text-shadow: 2px 2px -4px #0df43f;
+          -webkit-animation: shine 2s infinite linear;
+          animation: shine 2s infinite linear; }
+
+@-webkit-keyframes shine {
+  from {
+    text-shadow: 2px 2px 5px #057f0a; }
+  to {
+    text-shadow: 2px 2px 5px #0e5234; } }
+
+@keyframes shine {
+  from {
+    text-shadow: 2px 2px 5px #057f0a; }
+  to {
+    text-shadow: 2px 2px 5px #0e5234; } }
+      body .banner .middleBox .form-line {
+        width: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        background: white; }
+        body .banner .middleBox .form-line > div {
+          display: inline-block;
+          height: 50px;
+          width: 15%;
+          border-right: grey 1px solid; }
+        body .banner .middleBox .form-line div:nth-child(1) .dropDown {
+          display: none;
+          width: 500px;
+          background-color: white;
+          -webkit-box-shadow: 2px 2px 2px 2px white;
+          box-shadow: 2px 2px 2px 2px white;
+          border-radius: 4px; }
+          body .banner .middleBox .form-line div:nth-child(1) .dropDown input {
+            margin: 20px auto 20px 10px; }
+            body .banner .middleBox .form-line div:nth-child(1) .dropDown input:hover {
+              cursor: pointer; }
+          body .banner .middleBox .form-line div:nth-child(1) .dropDown .selectRegion {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+            flex-direction: row; }
+            body .banner .middleBox .form-line div:nth-child(1) .dropDown .selectRegion > div {
+              width: 100%;
+              text-align: center; }
+              body .banner .middleBox .form-line div:nth-child(1) .dropDown .selectRegion > div h5 {
+                width: 60px;
+                border-bottom: 2px solid black;
+                margin-left: 22%; }
+              body .banner .middleBox .form-line div:nth-child(1) .dropDown .selectRegion > div ul li {
+                padding: 5px 10px; }
+                body .banner .middleBox .form-line div:nth-child(1) .dropDown .selectRegion > div ul li a {
+                  display: block;
+                  width: 80%;
+                  height: 100%;
+                  color: black;
+                  padding: 10px 7%; }
+                  body .banner .middleBox .form-line div:nth-child(1) .dropDown .selectRegion > div ul li a:hover {
+                    color: white;
+                    background-color: #23BFD4; }
+        body .banner .middleBox .form-line div:nth-child(1):hover .dropDown {
+          display: block; }
+  body .cardsArea {
+    margin: 50px 5%; }
+    body .cardsArea > h3 {
+      display: block;
+      border-left: 10px solid #23BFD4;
+      font-weight: bold; }
+    body .cardsArea > div {
+      width: 100%; }
+      body .cardsArea > div > div {
+        width: 23%;
+        height: 100%;
+        border-radius: 10px;
+        margin: 10px 1% 70px 1%; }
+        body .cardsArea > div > div > div {
+          margin: 10px 9px; }
+          body .cardsArea > div > div > div h5 {
+            margin-bottom: 10px; }
+          body .cardsArea > div > div > div span, body .cardsArea > div > div > div p {
+            margin-top: 15px; }
+        body .cardsArea > div > div:hover {
+          -webkit-box-shadow: 1px 1px 12px grey;
+          box-shadow: 1px 1px 12px grey;
+          cursor: pointer; }
+  body .footer {
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 30px;
+    height: 200px;
+    background-color: #23BFD4;
+    color: white; }
