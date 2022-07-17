@@ -24,21 +24,8 @@
 </head>
 <body>
     <div id="app">
-        <!--testing swiper--->
-        <div class="swiper mySwiper">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide" style="text-align: center; font-size: 18px;">
-                    123
-                </div>
-              <div class="swiper-slide" style="text-align: center; font-size: 18px;">Slide 2</div>
-              <div class="swiper-slide" style="text-align: center; font-size: 18px;">Slide 3放div for迴圈</div>
-            </div>
-            <div class="swiper-button-next" style="width:10px;height:10px; color:red;position:absolute;top:50px;right:10px;"></div>
-            <div class="swiper-button-prev" style="position:absolute; top:35px;left:90%;color:green;"></div>
-   
-        </div>
 
-        <!----->
+
 
         <div class="banner">
             <div class="header">LOGO</div>
@@ -136,7 +123,61 @@
                 </div>
             </div>
             
+             
+
         </div>
+
+        
+         <!--testing swiper 不夠分離不好管理,底下只是先試寫---> 
+         <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" style="font-size: 18px;">
+                    <div class="cardContainer" style="padding:5% 0 10px 3%;"> 
+                        <div v-for="(item,key) in Toursdata.slice(5,9)" :key="item" style="margin-left:5px;"><!--使用v-for選染--->
+                            <img class="cardImage" :src="item.Picture.PictureUrl1">
+                            <div style="line-height:1.5;">
+                                <h5><strong>{{item.ActivityName}}</strong></h5>
+                                <img src="img/Vector.png" alt="地標小圖示"> <span class="tagSpan">{{item.Location}}</span>
+                                <br>
+                                <p class="f-Italic">期間{{item.StartTime}}~{{item.EndTime}}</p>
+                            </div>
+                        </div>  
+                    </div> 
+                </div>
+                <div class="swiper-slide" style="text-align: center; font-size: 18px;">
+                    <div class="cardContainer" style="padding:5% 0 10px 3%;"> 
+                        <div v-for="(item,key) in Toursdata.slice(9,13)" :key="item" style="margin-left:5px;"><!--使用v-for選染--->
+                            <img class="cardImage" :src="item.Picture.PictureUrl1">
+                            <div style="line-height:1.5;">
+                                <h5><strong>{{item.ActivityName}}</strong></h5>
+                                <img src="img/Vector.png" alt="地標小圖示"> <span class="tagSpan">{{item.Location}}</span>
+                                <br>
+                                <p class="f-Italic">期間{{item.StartTime}}~{{item.EndTime}}</p>
+                            </div>
+                        </div>  
+                    </div> 
+                </div>
+                <div class="swiper-slide" style="text-align: center; font-size: 18px;">
+                    <div class="cardContainer" style="padding:5% 0 10px 3%;"> 
+                        <div v-for="(item,key) in Toursdata.slice(13,17)" :key="item" style="margin-left:5px;"><!--使用v-for選染--->
+                            <img class="cardImage" :src="item.Picture.PictureUrl1">
+                            <div style="line-height:1.5;">
+                                <h5><strong>{{item.ActivityName}}</strong></h5>
+                                <img src="img/Vector.png" alt="地標小圖示"> <span class="tagSpan">{{item.Location}}</span>
+                                <br>
+                                <p class="f-Italic">期間{{item.StartTime}}~{{item.EndTime}}</p>
+                            </div>
+                        </div>  
+                    </div> 
+                </div>
+            </div>
+            <div class="swiper-button-next" style="width:10px;height:10px; color:red;"></div>
+            <div class="swiper-button-prev" style="color:green;"></div>
+   
+        </div>
+
+        <!----->
+
         <div class="footer">footer</div>
     </div>
    
